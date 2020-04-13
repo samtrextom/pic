@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-nampspace:pic"
+             xmlns:local1="clr-namespace:pic"
+             x:Class="pic.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Welcome to DinoTinder"/>
+        <Label x:Name="done_label" Text="" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+        <StackLayout Margin="20">
+            <local1:SwipeContainer Swipe="OnSwiped" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Image x:Name="picElement" Source="dino.jpg" WidthRequest="{OnPlatform iOS=300, Android=250}" HorizontalOptions="Center" />
+            </local1:SwipeContainer>
+            <Label x:Name="_label" Text="You swiped: "/>
+            <Label x:Name="_t_match_label" Text="Matches: "/>
+            <Label x:Name="_f_match_label" Text="Non Matches: "/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
